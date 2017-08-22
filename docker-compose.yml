@@ -1,0 +1,16 @@
+automacao-iot:
+
+ build: .
+ 
+# Uncomment the lines below if you want to use the source code in you host computer
+# volumes:
+/c/Users/$env:username/automacaoiot/:/root/workspace/
+   
+ ports:
+ - "10080:80"
+ 
+ devices:
+# Modify the line below if you serial adapter is mapped to a different port
+ - "/dev/ttyUSB0:/dev/ttyUSB0"
+ 
+ privileged: true
