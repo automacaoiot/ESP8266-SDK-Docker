@@ -1,0 +1,5 @@
+// Edit this keymap file and save to apply.
+[
+    { "command": "gototableft", "keys": { win: "", mac: "" } },
+    { "command": "gototabright", "keys": { win: "", "mac": "" } },
+]

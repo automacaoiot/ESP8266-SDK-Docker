@@ -4,7 +4,7 @@ automacao-iot:
  
 # Uncomment the lines below if you want to use the source code in you host computer
 # volumes:
-/c/Users/$env:username/automacaoiot/:/root/workspace/
+ - C/Users/$env:username/automacaoiot/:/workspace/
    
  ports:
  - "10080:80"
