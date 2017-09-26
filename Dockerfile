@@ -12,7 +12,7 @@ COPY assets/keybindings.settings /workspace/.c9/keybindings.settings
 
 RUN git clone -b tags/3.2.0 https://github.com/SmingHub/Sming.git /workspace/Sming
 
-RUN git clone https://github.com/automacaoiot/ES8266-SDK.git /workspace/Automacaoiot
+RUN git clone https://github.com/automacaoiot/ES8266-SDK.git /workspace/AutomacaoIot
 
 ENV SMING_HOME /workspace/Sming/Sming
 
