@@ -9,16 +9,11 @@ COPY assets/welcome.html /cloud9/plugins/c9.ide.welcome/welcome.html
 COPY assets/welcome.js /cloud9/plugins/c9.ide.welcome/welcome.js
 COPY assets/keybindings.settings /~/.c9/keybindings.settings
 COPY assets/keybindings.settings /workspace/.c9/keybindings.settings
+COPY assets/keybindings.settings /workspace/keybindings.settings
 
 RUN git clone https://github.com/automacaoiot/ESP8266-SDK.git /workspace/AutomacaoIot
 
-RUN git clone https://github.com/SmingHub/Sming.git /workspace/Sming
-
-WORKDIR /workspace/Sming
-
-RUN git checkout tags/3.2.0
-
-WORKDIR /workspace
+RUN git clone https://github.com/SmingHub/Sming.git /workspace/Sming && cd /workspace/Sming && git checkout tags/3.2.0
 
 ENV SMING_HOME /workspace/Sming/Sming
 
