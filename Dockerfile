@@ -18,6 +18,8 @@ WORKDIR /workspace/Sming
 
 RUN git checkout tags/3.2.0
 
+WORKDIR /workspace
+
 ENV SMING_HOME /workspace/Sming/Sming
 
 ENTRYPOINT /usr/bin/supervisord
