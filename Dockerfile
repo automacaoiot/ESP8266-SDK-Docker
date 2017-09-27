@@ -18,3 +18,5 @@ RUN git clone https://github.com/SmingHub/Sming.git /workspace/Sming && cd /work
 ENV SMING_HOME /workspace/Sming/Sming
 
 ENTRYPOINT /usr/bin/supervisord
+
+VOLUME /workspace
