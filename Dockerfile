@@ -1,11 +1,9 @@
 # ------------------------------------
-# Fast dockerized development environment 
+# Fast dockerized development environment
 # ------------------------------------
 
 FROM attachix/c9-esp8266-sdk:latest
 MAINTAINER Slavey Karadzhov <slav@attachix.com>
-
-VOLUME /workspace
 
 COPY assets/welcome.html /cloud9/plugins/c9.ide.welcome/welcome.html
 COPY assets/welcome.js /cloud9/plugins/c9.ide.welcome/welcome.js
@@ -20,5 +18,9 @@ RUN git clone https://github.com/automacaoiot/ESP8266-SDK.git /workspace/Automac
 RUN git clone https://github.com/SmingHub/Sming.git /workspace/Sming && cd /workspace/Sming && git checkout tags/3.2.0
 
 ENV SMING_HOME /workspace/Sming/Sming
+ENV SPI_SIZE 4MB
+ENV SERIAL python -m serial.tools.miniterm /dev/ttyUSB0 115200
 
 ENTRYPOINT /usr/bin/supervisord
+
+# VOLUME /workspace
