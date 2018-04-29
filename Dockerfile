@@ -17,10 +17,12 @@ RUN git clone https://github.com/automacaoiot/ESP8266-SDK.git /workspace/Automac
 
 RUN git clone https://github.com/SmingHub/Sming.git /workspace/Sming && cd /workspace/Sming && git checkout tags/3.2.0
 
+RUN mkdir shared-workspace
+
 ENV SMING_HOME /workspace/Sming/Sming
 ENV SPI_SIZE 4MB
 ENV SERIAL python -m serial.tools.miniterm /dev/ttyUSB0 115200
 
 ENTRYPOINT /usr/bin/supervisord
 
-# VOLUME /workspace
+# VOLUME /workspace/shared-workspace
