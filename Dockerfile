@@ -25,4 +25,4 @@ ENV SERIAL python -m serial.tools.miniterm /dev/ttyUSB0 115200
 
 ENTRYPOINT /usr/bin/supervisord
 
-# VOLUME /workspace/shared-workspace
+VOLUME /workspace/shared-workspace
