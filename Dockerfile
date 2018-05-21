@@ -15,7 +15,7 @@ RUN apk add nano --update-cache --repository https://pkgs.alpinelinux.org/packag
 
 RUN git clone https://github.com/automacaoiot/ESP8266-SDK.git /workspace/AutomacaoIot
 
-RUN git clone https://github.com/SmingHub/Sming.git /workspace/Sming && cd /workspace/Sming && git checkout tags/3.2.0
+RUN git clone https://github.com/automacaoiot/Sming /workspace/Sming && cd /workspace/Sming && git checkout Feature/3.2.0-HttpMethods
 
 RUN mkdir shared-workspace
 
